@@ -6,11 +6,43 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F43BD16D2326B5C900860C35 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F43BD16C2326B5C900860C35 /* main.c */; };
+		F43BD1722326B60100860C35 /* libcanard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4950314231D99FD00FD7532 /* libcanard.a */; };
+		F495031E231DC89100FD7532 /* canard.h in Headers */ = {isa = PBXBuildFile; fileRef = F495031C231DC89100FD7532 /* canard.h */; };
+		F495031F231DC89100FD7532 /* canard.c in Sources */ = {isa = PBXBuildFile; fileRef = F495031D231DC89100FD7532 /* canard.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F43BD1682326B5C900860C35 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F43BD16A2326B5C900860C35 /* demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43BD16C2326B5C900860C35 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F4950314231D99FD00FD7532 /* libcanard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcanard.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F495031C231DC89100FD7532 /* canard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = canard.h; sourceTree = "<group>"; };
+		F495031D231DC89100FD7532 /* canard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = canard.c; sourceTree = "<group>"; };
+		F4950321231F3DEF00FD7532 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F43BD1672326B5C900860C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43BD1722326B60100860C35 /* libcanard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4950312231D99FD00FD7532 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -21,10 +53,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43BD16B2326B5C900860C35 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				F43BD16C2326B5C900860C35 /* main.c */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		F43BD1712326B60100860C35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F495030B231D99FD00FD7532 = {
 			isa = PBXGroup;
 			children = (
+				F4950321231F3DEF00FD7532 /* README.md */,
+				F495031B231D9A0D00FD7532 /* src */,
+				F43BD16B2326B5C900860C35 /* demo */,
 				F4950315231D99FD00FD7532 /* Products */,
+				F43BD1712326B60100860C35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -32,8 +83,18 @@
 			isa = PBXGroup;
 			children = (
 				F4950314231D99FD00FD7532 /* libcanard.a */,
+				F43BD16A2326B5C900860C35 /* demo */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F495031B231D9A0D00FD7532 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F495031D231DC89100FD7532 /* canard.c */,
+				F495031C231DC89100FD7532 /* canard.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -43,12 +104,30 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F495031E231DC89100FD7532 /* canard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F43BD1692326B5C900860C35 /* demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43BD1702326B5C900860C35 /* Build configuration list for PBXNativeTarget "demo" */;
+			buildPhases = (
+				F43BD1662326B5C900860C35 /* Sources */,
+				F43BD1672326B5C900860C35 /* Frameworks */,
+				F43BD1682326B5C900860C35 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = demo;
+			productName = demo;
+			productReference = F43BD16A2326B5C900860C35 /* demo */;
+			productType = "com.apple.product-type.tool";
+		};
 		F4950313231D99FD00FD7532 /* canard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4950318231D99FD00FD7532 /* Build configuration list for PBXNativeTarget "canard" */;
@@ -72,9 +151,12 @@
 		F495030C231D99FD00FD7532 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Simon Roby";
 				TargetAttributes = {
+					F43BD1692326B5C900860C35 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					F4950313231D99FD00FD7532 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -93,21 +175,49 @@
 			projectRoot = "";
 			targets = (
 				F4950313231D99FD00FD7532 /* canard */,
+				F43BD1692326B5C900860C35 /* demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F43BD1662326B5C900860C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43BD16D2326B5C900860C35 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4950311231D99FD00FD7532 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F495031F231DC89100FD7532 /* canard.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F43BD16E2326B5C900860C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F43BD16F2326B5C900860C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F4950316231D99FD00FD7532 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,6 +352,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F43BD1702326B5C900860C35 /* Build configuration list for PBXNativeTarget "demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43BD16E2326B5C900860C35 /* Debug */,
+				F43BD16F2326B5C900860C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F495030F231D99FD00FD7532 /* Build configuration list for PBXProject "canard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
